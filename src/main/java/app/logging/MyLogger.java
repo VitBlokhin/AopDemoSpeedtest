@@ -29,8 +29,8 @@ public class MyLogger {
         return output;
     }
 
+    //
     public void print(Object obj) {
-
         System.out.println("Print info begin:");
 
         if (obj instanceof Set) {
