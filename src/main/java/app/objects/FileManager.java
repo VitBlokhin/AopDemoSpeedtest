@@ -1,5 +1,7 @@
 package app.objects;
 
+import app.annotations.ShowResult;
+import app.annotations.ShowTime;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
@@ -12,6 +14,8 @@ import java.util.TreeSet;
 @Component
 public class FileManager {
     // получаем список расширений файлов
+    @ShowTime
+    @ShowResult
     public Set<String> getExtensionList(String folder){
         File dir = new File(folder);
         Set<String> extList = new TreeSet<>();
@@ -28,6 +32,7 @@ public class FileManager {
     }
 
     // получаем количество файлов каждого расширения
+    @ShowResult
     public Map<String, Integer> getExtensionCount(String folder){
         File dir = new File(folder);
 
