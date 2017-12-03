@@ -9,12 +9,6 @@
     
     <context:component-scan base-package="app.*" />
 
-    <aop:config>
-        <aop:aspect id="log" ref="myLogger">
-            <aop:pointcut id="allMethods" expression="execution(* app.objects.FileManager.*(..))"/>
-            <aop:around pointcut-ref="allMethods" method="watchTime"/>
-            <aop:after-returning pointcut-ref="allMethods" returning="obj" method="print"/>
-        </aop:aspect>
-    </aop:config>
+    <aop:aspectj-autoproxy />
 
 </beans>
