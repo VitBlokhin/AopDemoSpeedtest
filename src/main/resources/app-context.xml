@@ -9,6 +9,6 @@
     
     <context:component-scan base-package="app.*" />
 
-    <aop:aspectj-autoproxy />
+    <aop:aspectj-autoproxy/>
 
 </beans>
